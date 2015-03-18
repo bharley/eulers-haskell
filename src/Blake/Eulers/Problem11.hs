@@ -23,8 +23,9 @@ grid = [[08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77,
         [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48]]
 
 -- Fetches the number at the given location
-atPoint :: Int -> Int -> [[b]] -> b
-atPoint x y graph = graph !! y !! x
+atPoint :: (Int, Int) -> [[b]] -> b
+atPoint (x, y) graph = graph !! y !! x
 
 -- All of the vertical 4-tuples in the given array
 -- verticalTuples :: [[a]] -> [(a, a, a, a)]
+-- map (\lst -> map (\x -> atPoint x grid) lst) [zip (take 4 $ repeat x) [0..4] | x <- [0..19]]

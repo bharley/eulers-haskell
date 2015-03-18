@@ -1,6 +1,6 @@
 module Blake.Eulers.Problem6 where
 
-import Blake.Eulers.Common (square)
+import Blake.Eulers.Utils (square)
 
 range = [1..100]
 answer = (squareOfSum range) - (sumOfSquares range)
