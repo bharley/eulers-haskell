@@ -27,4 +27,4 @@ atPoint :: Int -> Int -> [[b]] -> b
 atPoint x y graph = graph !! y !! x
 
 -- All of the vertical 4-tuples in the given array
-verticalTuples :: [[a]] -> [(a, a, a, a)]
+-- verticalTuples :: [[a]] -> [(a, a, a, a)]

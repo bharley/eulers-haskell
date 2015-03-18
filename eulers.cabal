@@ -24,7 +24,8 @@ library
     Blake.Eulers.Problem7,
     Blake.Eulers.Problem6,
     Blake.Eulers.Problem5,
-    Blake.Eulers.Problem4
+    Blake.Eulers.Problem4,
+    Blake.Eulers.Utils
   build-depends:
     base >=4.7 && <4.8,
     primes >=0.2.1 && <0.2.2

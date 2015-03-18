@@ -1,5 +1,7 @@
 module Blake.Eulers.Problem9 where
 
+import Blake.Eulers.Utils (square, product3Tuple)
+
 answer = product3Tuple $ last $ takeWhileInclusive (not . isPythagoreanTriplet) (possibleTuples 1000)
 
 -- A list of 3-tuples satisfying `a + b + c = n`
@@ -11,14 +13,6 @@ isPythagoreanTriplet (a, b, c) = (a2 + b2) == c2
   where a2 = (square a)
         b2 = (square b)
         c2 = (square c)
-
--- Multiplies the components of a 3-tuple
-product3Tuple :: Num a => (a, a, a) -> a
-product3Tuple (a, b, c) = a * b * c
-
--- Squares the given number
-square :: Num a => a -> a
-square n = n * n
 
 -- http://stackoverflow.com/a/22472610
 takeWhileInclusive :: (a -> Bool) -> [a] -> [a]
