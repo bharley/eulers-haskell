@@ -1,8 +1,10 @@
 module Blake.Eulers.Problem14 where
 
-import Data.List (sort, nub)
+import Data.List (sortBy, nub)
+import Data.Function (on)
 
-answer = (last . sort . nub) [(length . collatz) n | n <- [1..999999]]
+--answer = (last . sort . nub) [(n, (length . collatz) n) | n <- [1..999999]]
+answer = (fst . last . sortBy (compare `on` snd)) [(n, (length . collatz) n) | n <- [1..999999]]
 
 -- Calculates the Collatz Sequence for n
 collatz :: Integral a => a -> [a]
