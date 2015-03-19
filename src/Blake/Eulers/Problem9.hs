@@ -1,6 +1,6 @@
 module Blake.Eulers.Problem9 where
 
-import Blake.Eulers.Utils (square, product3Tuple)
+import Blake.Eulers.Utils (square, product3Tuple, takeWhileInclusive)
 
 answer = product3Tuple $ last $ takeWhileInclusive (not . isPythagoreanTriplet) (possibleTuples 1000)
 
@@ -13,9 +13,3 @@ isPythagoreanTriplet (a, b, c) = (a2 + b2) == c2
   where a2 = (square a)
         b2 = (square b)
         c2 = (square c)
-
--- http://stackoverflow.com/a/22472610
-takeWhileInclusive :: (a -> Bool) -> [a] -> [a]
-takeWhileInclusive _ [] = []
-takeWhileInclusive p (x:xs) = x : if p x then takeWhileInclusive p xs
-                                         else []
