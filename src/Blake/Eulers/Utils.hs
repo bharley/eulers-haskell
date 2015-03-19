@@ -3,6 +3,11 @@ module Blake.Eulers.Utils where
 import Control.Arrow ((&&&))
 import Data.List (group, sort)
 
+-- http://stackoverflow.com/a/3963286
+digits :: Integral x => x -> [x]
+digits 0 = []
+digits x = digits (x `div` 10) ++ [x `mod` 10]
+
 -- Multiplies the components of a 3-tuple
 product3Tuple :: Num a => (a, a, a) -> a
 product3Tuple (a, b, c) = a * b * c

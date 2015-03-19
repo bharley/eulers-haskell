@@ -1,7 +1,7 @@
 module Blake.Eulers.Problem4 where
 
 import Data.List
-
+import Blake.Eulers.Utils (digits)
 
 -- The answer
 answer = last $ sort $ filter palindrome $ map digits $ nub threeDigitProducts
@@ -16,9 +16,3 @@ palindrome :: Integral n => [n] -> Bool
 palindrome []     = True -- Not sure about this case, but we shouldn't need it
 palindrome (_:[]) = True
 palindrome (x:xs) = if x == (last xs) then (palindrome $ init xs) else False
-
-
--- http://stackoverflow.com/a/3963286
-digits :: Integral x => x -> [x]
-digits 0 = []
-digits x = digits (x `div` 10) ++ [x `mod` 10]
