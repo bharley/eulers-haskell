@@ -1,5 +1,9 @@
 module Blake.Eulers.Problem11 where
 
+import Data.List (sort, nub)
+
+answer = last $ sort $ nub $ pointGroupProduct $ horizontalPoints ++ verticalPoints ++ diagBackPoints ++ diagForwardPoints
+
 -- The problem domain
 grid = [[08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08],
         [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00],
@@ -26,6 +30,17 @@ grid = [[08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77,
 atPoint :: (Int, Int) -> [[b]] -> b
 atPoint (x, y) graph = graph !! y !! x
 
--- All of the vertical 4-tuples in the given array
--- verticalTuples :: [[a]] -> [(a, a, a, a)]
--- map (\lst -> map (\x -> atPoint x grid) lst) [zip (take 4 $ repeat x) [0..4] | x <- [0..19]]
+pointGroupProduct :: [[(Int, Int)]] -> [Integer]
+pointGroupProduct = map (\points -> product $ map (\point -> atPoint point grid) points)
+
+horizontalPoints :: (Num a, Enum a) => [[(a,a)]]
+horizontalPoints = concat [[zip [x..(x+3)] (take 4 $ repeat y) | x <- [0..16]] | y <- [0..19]]
+
+verticalPoints :: (Num a, Enum a) => [[(a,a)]]
+verticalPoints = concat [[zip (take 4 $ repeat x) [y..(y+3)] | x <- [0..19]] | y <- [0..16]]
+
+diagBackPoints :: (Num a, Enum a) => [[(a,a)]]
+diagBackPoints = concat [[zip [x..(x+3)] [y..(y+3)] | x <- [0..16]] | y <- [0..16]]
+
+diagForwardPoints :: (Num a, Enum a) => [[(a,a)]]
+diagForwardPoints = concat [[zip [x,(x-1)..(x-3)] [y..(y+3)] | x <- [3..19]] | y <- [0..16]]
