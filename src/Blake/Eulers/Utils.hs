@@ -8,6 +8,10 @@ digits :: Integral x => x -> [x]
 digits 0 = []
 digits x = digits (x `div` 10) ++ [x `mod` 10]
 
+-- Gets a slice of a list
+sublist :: Int -> Int -> [a] -> [a]
+sublist a b lst = take (b - a) . drop a $ lst
+
 -- Multiplies the components of a 3-tuple
 product3Tuple :: Num a => (a, a, a) -> a
 product3Tuple (a, b, c) = a * b * c
