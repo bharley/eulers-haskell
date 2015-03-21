@@ -1,7 +1,8 @@
 module Blake.Eulers.Utils where
 
 import Control.Arrow ((&&&))
-import Data.List (group, sort)
+import Data.List (group, sort, foldl')
+import Data.Bits (testBit, bitSize)
 
 -- http://stackoverflow.com/a/3963286
 digits :: Integral x => x -> [x]
@@ -36,3 +37,17 @@ frequency = map (length &&& head) . group . sort
 -- Easy peasy lemon squeezy
 factorial :: Integral a => a -> a
 factorial n = product [1..n]
+
+-- Infinite Fibonacci sequence
+-- https://wiki.haskell.org/The_Fibonacci_sequence#Canonical_zipWith_implementation
+--fibonacci :: Num a => [a]
+--fibonacci = g (1,0)  where  g (a,b) = b : g (a+b,a)
+
+fibonacci :: Int -> Integer
+fibonacci n = snd . foldl' fib' (1, 0) . dropWhile not $
+            [testBit n k | k <- let s = bitSize n in [s-1,s-2..0]]
+          where
+              fib' (f, g) p
+                  | p         = (f*(f+2*g), ss)
+                  | otherwise = (ss, g*(2*f-g))
+                  where ss = f*f+g*g
