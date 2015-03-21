@@ -32,3 +32,7 @@ divisors n = 1 : filter ((== 0) . rem n) [2 .. n `div` 2] ++ [n]
 -- http://stackoverflow.com/a/10398874/352967
 frequency :: Ord a => [a] -> [(Int, a)]
 frequency = map (length &&& head) . group . sort
+
+-- Easy peasy lemon squeezy
+factorial :: Integral a => a -> a
+factorial n = product [1..n]
