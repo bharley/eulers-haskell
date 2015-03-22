@@ -18,6 +18,7 @@ cabal-version:       >=1.10
 library
   exposed-modules:
 --    Blake.Eulers.Problem67,
+    Blake.Eulers.Problem31,
     Blake.Eulers.Problem30,
     Blake.Eulers.Problem29,
     Blake.Eulers.Problem28,
