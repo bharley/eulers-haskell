@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem23 where
+module Blake.Eulers.Problem023 where
 
 import Data.List (permutations, sort)
 

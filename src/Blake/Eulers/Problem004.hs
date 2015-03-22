@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem4 where
+module Blake.Eulers.Problem004 where
 
 import Data.List
 import Blake.Eulers.Utils (digits, palindrome)

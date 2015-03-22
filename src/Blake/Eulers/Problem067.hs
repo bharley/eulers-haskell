@@ -1,6 +1,6 @@
-module Blake.Eulers.Problem67 where
+module Blake.Eulers.Problem067 where
 
-import Blake.Eulers.Problem18 (collapseTriangle)
+import Blake.Eulers.Problem018 (collapseTriangle)
 
 answer = collapseTriangle triangle
 

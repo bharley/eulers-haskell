@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem22 where
+module Blake.Eulers.Problem022 where
 
 import Data.Char (ord)
 import Data.List (sort, elemIndex)

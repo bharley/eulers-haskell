@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem5 where
+module Blake.Eulers.Problem005 where
 
 -- This is a naive answer that is quite inefficient
 step = 38 -- This seems like a decent value to step by

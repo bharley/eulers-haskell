@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem18 where
+module Blake.Eulers.Problem018 where
 
 import Blake.Eulers.Utils (sublist)
 

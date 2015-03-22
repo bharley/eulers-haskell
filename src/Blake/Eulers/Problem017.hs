@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem17 where
+module Blake.Eulers.Problem017 where
 
 answer = length $ filter wantChar $ concat [numberToEnglish x | x <- [1..1000]]
 

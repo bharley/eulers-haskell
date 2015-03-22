@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem8 where
+module Blake.Eulers.Problem008 where
 
 import Blake.Eulers.Utils (sublist)
 import Data.List (nub, sort)

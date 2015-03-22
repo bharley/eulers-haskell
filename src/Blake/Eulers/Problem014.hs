@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem14 where
+module Blake.Eulers.Problem014 where
 
 import Data.List (sortBy, nub)
 import Data.Function (on)

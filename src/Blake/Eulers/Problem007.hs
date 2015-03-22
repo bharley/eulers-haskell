@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem7 where
+module Blake.Eulers.Problem007 where
 
 import Data.Numbers.Primes (primes)
 

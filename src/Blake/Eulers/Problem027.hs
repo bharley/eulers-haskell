@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem27 where
+module Blake.Eulers.Problem027 where
 
 import Data.Numbers.Primes (isPrime)
 import Data.List (sortBy)

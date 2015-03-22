@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem6 where
+module Blake.Eulers.Problem006 where
 
 import Blake.Eulers.Utils (square)
 

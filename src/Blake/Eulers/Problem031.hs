@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem31 where
+module Blake.Eulers.Problem031 where
 
 -- Brute force it, baby (the +2 comes from the note above the definition of "combinations")
 answer = ((+2) . length) combinations

@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem33 where
+module Blake.Eulers.Problem033 where
 
 import Data.Ratio (denominator, (%), Ratio)
 

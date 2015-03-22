@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem12 where
+module Blake.Eulers.Problem012 where
 
 import Data.Numbers.Primes (primeFactors)
 import Blake.Eulers.Utils (takeWhileInclusive, frequency)

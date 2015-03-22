@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem21 where
+module Blake.Eulers.Problem021 where
 
 import Blake.Eulers.Utils (divisors)
 

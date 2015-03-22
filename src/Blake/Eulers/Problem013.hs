@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem13 where
+module Blake.Eulers.Problem013 where
 
 import Blake.Eulers.Utils (digits)
 

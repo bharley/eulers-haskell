@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem24 where
+module Blake.Eulers.Problem024 where
 
 import Blake.Eulers.Utils (fibonacci, digits, takeWhileInclusive)
 

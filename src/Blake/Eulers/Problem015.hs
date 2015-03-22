@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem15 where
+module Blake.Eulers.Problem015 where
 
 answer = paths 20
 

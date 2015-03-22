@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem29 where
+module Blake.Eulers.Problem029 where
 
 import Data.List (nub)
 

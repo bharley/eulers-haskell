@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem9 where
+module Blake.Eulers.Problem009 where
 
 import Blake.Eulers.Utils (square, product3Tuple, takeWhileInclusive)
 

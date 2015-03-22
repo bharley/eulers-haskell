@@ -1,4 +1,4 @@
-module Blake.Eulers.Problem28 where
+module Blake.Eulers.Problem028 where
 
 answer = sum $ diagonals $ cubeLayers 1001
 
