@@ -9,6 +9,11 @@ digits :: Integral x => x -> [x]
 digits 0 = []
 digits x = digits (x `div` 10) ++ [x `mod` 10]
 
+-- http://stackoverflow.com/a/1918515/352967
+fromDigits :: Integral a => [a] -> a
+fromDigits = foldl addDigit 0
+   where addDigit num d = 10 * num + d
+
 -- Gets a slice of a list
 sublist :: Int -> Int -> [a] -> [a]
 sublist a b lst = take (b - a) . drop a $ lst
@@ -37,6 +42,13 @@ frequency = map (length &&& head) . group . sort
 -- Easy peasy lemon squeezy
 factorial :: Integral a => a -> a
 factorial n = product [1..n]
+
+-- You spin me right round baby
+rotations :: Eq a => [a] -> [[a]]
+rotations n = rotations' [n]
+  where rotations' rots@(n':_)
+          | (length rots) == (length n) = rots
+          | otherwise                   = rotations' $ (last n' : init n') : rots
 
 -- Infinite Fibonacci sequence
 -- https://wiki.haskell.org/The_Fibonacci_sequence#Canonical_zipWith_implementation
