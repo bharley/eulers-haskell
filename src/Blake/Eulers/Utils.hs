@@ -50,6 +50,12 @@ rotations n = rotations' [n]
           | (length rots) == (length n) = rots
           | otherwise                   = rotations' $ (last n' : init n') : rots
 
+-- Determines if a number is a palindrome
+palindrome :: Integral n => [n] -> Bool
+palindrome []     = True -- Not sure about this case, but we shouldn't need it
+palindrome (_:[]) = True
+palindrome (x:xs) = if x == (last xs) then (palindrome $ init xs) else False
+
 -- Infinite Fibonacci sequence
 -- https://wiki.haskell.org/The_Fibonacci_sequence#Canonical_zipWith_implementation
 --fibonacci :: Num a => [a]
