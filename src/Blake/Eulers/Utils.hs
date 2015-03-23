@@ -18,6 +18,17 @@ fromDigits = foldl addDigit 0
 sublist :: Int -> Int -> [a] -> [a]
 sublist a b lst = take (b - a) . drop a $ lst
 
+-- Functions for 3-tuples
+fst3 (a, _, _) = a
+snd3 (_, b, _) = b
+thd3 (_, _, c) = c
+
+-- Functions for 4-tuples
+fst4 (a, _, _, _) = a
+snd4 (_, b, _, _) = b
+thd4 (_, _, c, _) = c
+frt4 (_, _, _, d) = d
+
 -- Multiplies the components of a 3-tuple
 product3Tuple :: Num a => (a, a, a) -> a
 product3Tuple (a, b, c) = a * b * c
