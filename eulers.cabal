@@ -17,8 +17,7 @@ cabal-version:       >=1.10
 
 library
   exposed-modules:
-    Blake.Eulers.Problem042,
-    Blake.Eulers.Problem022,
+    Blake.Eulers.Problem047,
     Blake.Eulers.Utils
   build-depends:
     base >=4.7 && <4.8,
